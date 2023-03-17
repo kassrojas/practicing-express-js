@@ -1,7 +1,7 @@
 // import express
 const express = require('express');
 const path = require('path');
-const vocabData = require('./vocabulary.json');
+const vocabData = require('./db/vocabulary.json');
 // initialize app variable by setting it to value of express()
 const app = express();
 const PORT = 3001;
