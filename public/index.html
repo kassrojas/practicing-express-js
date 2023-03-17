@@ -1,16 +1,30 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>Practicing Express.js</title>
 </head>
 
 <body>
-  <p>You are about to make an API call to view the data on the json document</p>
-  <a href="http://localhost:3001/api/vocab">Go to http://localhost:3001/api/vocab to view json document containing
-    vocabulary</a>
+  <section class="m-3 text-center">
+    <p>You are about to make an API call to view the data on the json document. To do so visit:
+      <a href="http://localhost:3001/api/vocab" style="text-decoration: none;">
+        http://localhost:3001/api/vocab
+      </a>
+      for the full document or press a button below:
+    </p>
+    <button class="btn btn-outline-dark" id="fetch-term-btn"> Fetch All Terms</button>
+    <button class="btn btn-outline-dark" id="fetch-cat-btn"> Fetch All Categories</button>
+  </section>
+  <aside class="card-body m-3" id="terms">
+    <!-- display terms here -->
+  </aside>
+  <script src="index.js"></script>
 </body>
 
 </html>
