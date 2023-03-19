@@ -53,7 +53,6 @@ app.get('/api/vocab/new/:tech', (req, res) => {
       return res.json(vocabData[i]);
     }
   }
-
   // Return a message if the term doesn't exist in our DB
   return res.json('No match found');
 });
@@ -86,6 +85,23 @@ app.get('/api/categories', (req, res) => {
   return res.json(filteredResult);
 
 })
+
+// POST request to add vocab word
+app.post('/api/vocab', (req, res) => {
+  console.info(`${req.method} request received for /api/vocab`);
+
+  let response = "";
+
+  if (req.body && req)
+
+
+
+
+
+
+    console.info(req.rawHeaders);
+  console.info(req.body);
+});
 
 
 

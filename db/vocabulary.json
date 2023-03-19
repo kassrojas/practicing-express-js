@@ -1,44 +1,38 @@
 [
   {
     "id": "1",
-    "tech": "React.js",
-    "definition": "React is a free and open-source front-end JavaScript library for building user interfaces based on components",
-    "url": "https://en.wikipedia.org/wiki/React_(JavaScript_library)",
-    "category": "library"
+    "question": "React.js",
+    "answer": "React is a free and open-source front-end JavaScript library for building user interfaces based on components",
+    "url": "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
   },
   {
     "id": "2",
-    "tech": "Express.js",
-    "definition": "Express is a back end web application framework for building RESTful APIs with Node.js",
-    "url": "https://en.wikipedia.org/wiki/Express.js",
-    "category": "library"
+    "question": "Express.js",
+    "answer": "Express is a back end web application framework for building RESTful APIs with Node.js",
+    "url": "https://en.wikipedia.org/wiki/Express.js"
   },
   {
     "id": "3",
-    "tech": "Node.js",
-    "definition": "Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser. It allows developers to use JavaScript to write command line tools and for server-side scripting",
-    "url": "https://en.wikipedia.org/wiki/Node.js",
-    "category": "library"
+    "question": "Node.js",
+    "answer": "Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser. It allows developers to use JavaScript to write command line tools and for server-side scripting",
+    "url": "https://en.wikipedia.org/wiki/Node.js"
   }, 
   {
     "id": "4",
-    "tech": "SEO",
-    "definition": "Search engine optimization is the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic rather than direct traffic or paid traffic.",
-    "url": "https://en.wikipedia.org/wiki/Search_engine_optimization",
-    "category": "cs"
+    "question": "SEO",
+    "answer": "Search engine optimization is the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic rather than direct traffic or paid traffic.",
+    "url": "https://en.wikipedia.org/wiki/Search_engine_optimization"
   },
   {
     "id": "5",
-    "tech": "API",
-    "definition": "An application programming interface, is a computing interface that defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc",
-    "url": "https://en.wikipedia.org/wiki/API",
-    "category": "cs"
+    "question": "API",
+    "answer": "An application programming interface, is a computing interface that defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc",
+    "url": "https://en.wikipedia.org/wiki/API"
  },
  {
     "id": "6",
-    "tech": "REST",
-    "definition": "Stands for Representational State Transfer. This term is usually used in the context of describing an API where requests are made to a URI and a response is given in the form of HTML, XML, JSON, or some other format",
-    "url": "https://en.wikipedia.org/wiki/Representational_state_transfer",
-    "category": "cs"
+    "question": "REST",
+    "answer": "Stands for Representational State Transfer. This term is usually used in the context of describing an API where requests are made to a URI and a response is given in the form of HTML, XML, JSON, or some other format",
+    "url": "https://en.wikipedia.org/wiki/Representational_state_transfer"
  }
 ]
