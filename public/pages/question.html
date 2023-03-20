@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../styles/index.css">
+  <title>Submit Question</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="links">
+        <a href="/">Home</a>
+      </div>
+    </nav>
+  </header>
+  <section class="add-div">
+    <div class="jumbotron">
+      <h2>Add An Interview Question</h2>
+    </div>
+    <form id="add-q-form">
+      <div class="form-group">
+        <h4>Question</h4>
+        <textarea type="input" class="q-input" id="question-input" placeholder="Enter Question"></textarea>
+      </div>
+      <div class="form-group">
+        <h4>Answer</h4>
+        <textarea type="textarea" class="a-input" id="answer-input" placeholder="Enter Answer"></textarea>
+      </div>
+      <button type="submit" class="btn jumbotron fs-5" id="submit-btn">Submit Question</button>
+    </form>
+  </section>
+
+  <script src="../scripts/question.js"></script>
+</body>
+
+</html>

@@ -17,9 +17,13 @@ app.use(express.static('public'));
 
 // as soon as you visit the localhost:3001/ you will be send the index.html file to view
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 })
 
+
+app.get('/question', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/pages/question.html'));
+})
 
 // GET all vocab
 app.get('/api/vocab', (req, res) => {
@@ -88,21 +92,8 @@ app.get('/api/categories', (req, res) => {
 
 // POST request to add vocab word
 app.post('/api/vocab', (req, res) => {
-  console.info(`${req.method} request received for /api/vocab`);
-
-  let response = "";
-
-  if (req.body && req)
-
-
-
-
-
-
-    console.info(req.rawHeaders);
-  console.info(req.body);
-});
-
+  console.info(`${req.method} request recieved to add question`);
+})
 
 
 
