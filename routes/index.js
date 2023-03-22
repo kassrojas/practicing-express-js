@@ -4,13 +4,13 @@ const router = require('express').Router();
 const uuid = require('../helpers/uuid');
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils')
 
-// GET Route for retrieving all the tips
+// GET Route for retrieving all the existing questions
 router.get('/api/question', (req, res) => {
   console.info(`${req.method} request received for questions`);
   readFromFile('./db/question.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// POST Route for a new UX/UI tip
+// POST Route for a new question
 router.post('/api/question', (req, res) => {
   console.info(`${req.method} request received to add a question`);
 
@@ -25,7 +25,12 @@ router.post('/api/question', (req, res) => {
     };
 
     readAndAppend(newQuestion, './db/question.json');
-    res.json(`question added successfully 🚀`);
+
+    const successRes = {
+      status: 'successfully added 💥',
+      body: newQuestion,
+    }
+    res.json(successRes);
   } else {
     res.error('Error in adding question');
   }
