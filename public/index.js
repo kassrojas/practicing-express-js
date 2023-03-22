@@ -1,23 +1,15 @@
 const termEl = document.querySelector('#terms');
-const categoryEl = document.querySelector('#categories');
 const btnFetchTerms = document.querySelector('#fetch-term-btn');
-const btnFetchCategories = document.querySelector('#fetch-cat-btn');
+
 
 const getTerms = async () => {
-  const result = await fetch('/api/vocab', {
+  const result = await fetch('/api/question', {
     method: 'GET',
   });
   const json = await result.json();
   return json;
 };
 
-const getCategories = async () => {
-  const categories = await fetch('/api/categories', {
-    method: 'GET',
-  });
-  const jsonCat = await categories.json();
-  return jsonCat;
-};
 
 // you can pass in whatever name you want just make sure you pass in data as "passedInName.WhateverPartOfTheObjectYouWant"
 const renderTerms = (vocab) => {
@@ -40,26 +32,14 @@ const renderTerms = (vocab) => {
 
 const showAnswer = () => {
   console.log('here');
-}
-
-const renderCategories = (vocab) => {
-  categoryEl.innerHTML += `
-  <div class="card"> 
-  <h5 class="card-title">${vocab}</h5>
-  </div>
-  `
-}
+};
 
 const termBtnHandler = () => {
   getTerms().then((res) => res.forEach((item) => renderTerms(item)));
 };
 
-const catBtnHandler = () => {
-  getCategories().then((res) => res.forEach((item) => renderCategories(item)));
-};
-
-
-
-
 btnFetchTerms.addEventListener('click', termBtnHandler);
-btnFetchCategories.addEventListener('click', catBtnHandler);
+
+
+
+

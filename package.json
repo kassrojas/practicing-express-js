@@ -2,7 +2,7 @@
   "name": "practicing-express",
   "version": "1.0.0",
   "description": "## Getting Started",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon server.js"
@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/kassrojas/practicing-express-js#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
