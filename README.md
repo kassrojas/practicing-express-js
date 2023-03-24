@@ -29,5 +29,6 @@ This application allows users to add potential JavaScript interview questions an
 
 - `npm i` installs all necessary dependencies
 - `npm i --save-dev nodemon` installs nodemone as a dev dependency for ease of testing and updating
+- `npm run watch` starts the server at http://localhost:3001
 
 ## Future Developments
