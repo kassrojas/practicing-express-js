@@ -14,7 +14,7 @@ This application allows users to add potential JavaScript interview questions an
 
 ## Table of Contents
 
-- [Technologies](#technologies)
+- [Technologies](#technologies-used)
 - [Installation](#installation)
 - [Future Developments](#future-developments)
 
