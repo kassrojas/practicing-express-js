@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./styles/index.css" />
-  <title>Practicing Express.js</title>
+  <link rel="stylesheet" href="../styles/index.css">
+  <title>Edit Quesions</title>
 </head>
 
 <body>
@@ -25,20 +25,15 @@
       </div>
     </nav>
   </header>
-  <section class="m-3 text-center api-blurb">
-    <p>You are about to make an API call to view the data on the json document. To do so visit:
-      <a href="http://localhost:3001/api/question" style="text-decoration: none;">
-        http://localhost:3001/api/question
-      </a>
-      for the full document or press a button below:
-    </p>
-    <button class="btn jumbotron" id="fetch-term-btn"> View Cards </button>
+  <section class="edit-question">
+    <h1>Edit Questions</h1>
+    <p>You can delete or modify exisiting questions on this page</p>
   </section>
-  <aside id="terms">
+  <div id="display-terms">
     <!-- display terms here -->
-  </aside>
+  </div>
 
-  <script src="index.js"></script>
+  <script src="../scripts/editQuestion.js"></script>
 </body>
 
 </html>

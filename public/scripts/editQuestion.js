@@ -1,0 +1,1 @@
+const displayTermEl = document.querySelector('#display-terms');

@@ -21,6 +21,10 @@ app.get('/question', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/pages/question.html'))
 );
 
+app.get('/edit', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/editQuestion.html'))
+});
+
 app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
+  console.log(`App listening at http://localhost:${PORT}`)
 );

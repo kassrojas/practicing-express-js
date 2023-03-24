@@ -1,6 +1,6 @@
 const termEl = document.querySelector('#terms');
 const btnFetchTerms = document.querySelector('#fetch-term-btn');
-
+const blurbEl = document.querySelector('.api-blurb');
 
 const getTerms = async () => {
   const result = await fetch('/api/question', {
@@ -11,31 +11,53 @@ const getTerms = async () => {
 };
 
 
-// you can pass in whatever name you want just make sure you pass in data as "passedInName.WhateverPartOfTheObjectYouWant"
-const renderTerms = (vocab) => {
-  termEl.innerHTML += `
-  <div class="card m-2 p-2">
-  <div class="card-body">
-  <h5 class="card-title answer-para">${vocab.question}</h5>
-  <p class="card-text hidden" id=${vocab.id}>${vocab.answer}</p>
-  <button class="btn btn-primary answer-btn">View Answer</button>
-  <a href="${vocab.url}" class="btn btn-primary" target="_blank">Look Further</a>
-  </div>
-  </div>
+// you can pass in whatever name you want
+const renderTerms = (term) => {
+  // dynamically create card with const json from fetch request
+  const cardEl = document.createElement('section');
+  cardEl.classList.add('card', 'my-2', 'p-2');
+  cardEl.setAttribute('key', term.id);
+
+  // create card header
+  const cardHeaderEl = document.createElement('div');
+  cardHeaderEl.classList.add('card-header', 'my-2');
+  cardHeaderEl.innerHTML = `<h4>${term.question}</h4>`;
+
+  // create card body
+  const cardBodyEl = document.createElement('div');
+  cardBodyEl.classList.add('card-body', 'hidden');
+  cardBodyEl.innerHTML = `
+  <p class="card-text answer-para">${term.answer}</p>
+  <a href="${term.url}" class="btn answer-para jumbotron" target="_blank">
+    Learn Further
+  </a>
   `;
-  const btnShowAnswer = document.querySelectorAll('.answer-btn');
 
-  for (let i = 0; i < btnShowAnswer.length; i++) {
-    btnShowAnswer[i].addEventListener('click', showAnswer);
-  }
+  // create card button
+  const cardButtonEl = document.createElement('button');
+  cardButtonEl.classList.add('jumbotron', 'btn', 'mb-2');
+  cardButtonEl.setAttribute('id', 'view-a-btn')
+  cardButtonEl.textContent = "Toggle Answer";
+
+  // append elements
+  cardEl.appendChild(cardHeaderEl);
+  cardEl.appendChild(cardBodyEl);
+  cardEl.appendChild(cardButtonEl);
+  termEl.appendChild(cardEl);
+
+  cardButtonEl.addEventListener('click', function (e) {
+    const target = e.target.closest('#view-a-btn');
+    if (target) {
+      cardBodyEl.classList.toggle('hidden');
+    }
+  })
 };
 
-const showAnswer = () => {
-  console.log('here');
-};
 
 const termBtnHandler = () => {
-  getTerms().then((res) => res.forEach((item) => renderTerms(item)));
+  getTerms().then((res) => res.forEach((term) => renderTerms(term)));
+  btnFetchTerms.classList.add('hidden');
+  blurbEl.innerHTML = `<h3> Viewing All Questions </h3>`;
 };
 
 btnFetchTerms.addEventListener('click', termBtnHandler);

@@ -1,8 +1,9 @@
 // segements out router logic in express
 const router = require('express').Router();
+const fs = require('fs');
 // Helper method for generating unique ids
 const uuid = require('../helpers/uuid');
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils')
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils')
 
 // GET Route for retrieving all the existing questions
 router.get('/api/question', (req, res) => {
@@ -27,7 +28,7 @@ router.post('/api/question', (req, res) => {
     readAndAppend(newQuestion, './db/question.json');
 
     const successRes = {
-      status: 'successfully added 💥',
+      status: 'Adding...',
       body: newQuestion,
     }
     res.json(successRes);
@@ -35,6 +36,26 @@ router.post('/api/question', (req, res) => {
     res.error('Error in adding question');
   }
 });
+
+// router.delete(`/api/question/:id`, (req, res) => {
+//   const { id } = req.params;
+
+//   const savedQuestion = fs.readFileSync('./db/question.json', 'utf-8');
+//   const parsedQuestion = JSON.parse(savedQuestion);
+
+//   const deleteQuestion = parsedQuestion.filter((q) => {
+//     if (q.id == id) {
+//       res.send();
+//     } else {
+//       console.log('error deleting question');
+//     };
+//   });
+
+//   readAndAppend(deleteQuestion, './db/question.json')
+//   res.send();
+// });
+
+
 
 
 module.exports = router;

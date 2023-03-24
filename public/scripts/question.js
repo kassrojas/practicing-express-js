@@ -1,4 +1,6 @@
 const questionForm = document.querySelector('#add-q-form');
+let successMsg = document.querySelector('#success-message');
+let submitBtn = document.querySelector('#submit-btn');
 
 questionForm
   .addEventListener('submit', (e) => {
@@ -14,8 +16,6 @@ questionForm
       url
     };
 
-    console.log(newQuestion);
-
     if (newQuestion) {
       // Fetch POST request to the server
       fetch('api/question', {
@@ -28,10 +28,14 @@ questionForm
       })
         .then((res) => res.json())
         .then((data) => {
-          alert(data.status);
-          question = '';
-          answer = '';
-          url = '';
+          // question = '';
+          // answer = '';
+          // url = '';
+          submitBtn.textContent = `${data.status}`;
+          setTimeout(() => {
+            submitBtn.textContent = "Submit Question";
+            window.location.reload(); //bc the =''; isnt working
+          }, 1200);
         });
 
     } else if (error) {

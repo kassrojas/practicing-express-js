@@ -17,6 +17,12 @@
       <div class="links">
         <a href="/">Home</a>
       </div>
+      <div class="links">
+        <a href="/question">Add Question</a>
+      </div>
+      <div class="links">
+        <a href="/edit">Edit Questions</a>
+      </div>
     </nav>
   </header>
   <section class="add-div">
@@ -26,11 +32,11 @@
     <form id="add-q-form">
       <div class="form-group">
         <h4>Question</h4>
-        <textarea type="input" class="q-input" id="question-input" placeholder="Enter Question"></textarea>
+        <textarea type="input" class="q-input" id="question-input" placeholder="Enter Question" required></textarea>
       </div>
       <div class="form-group">
         <h4>Answer</h4>
-        <textarea type="textarea" class="a-input" id="answer-input" placeholder="Enter Answer"></textarea>
+        <textarea type="textarea" class="a-input" id="answer-input" placeholder="Enter Answer" required></textarea>
       </div>
       <div class="form-group">
         <h4>URL</h4>
@@ -39,6 +45,7 @@
       </div>
       <button type="submit" class="btn jumbotron fs-5" id="submit-btn">Submit Question</button>
     </form>
+    <section id="success-message"></section>
   </section>
 
   <script src="../scripts/question.js"></script>
