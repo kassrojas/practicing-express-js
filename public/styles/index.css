@@ -40,6 +40,12 @@
   display: block;
 }
 
+.api-blurb p {
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+}
+
 .navbar {
   background-color: var(--cream);
   padding: 1rem;
@@ -66,17 +72,22 @@
   transition: 0.4s;
 }
 
-#view-a-btn,
 #terms {
   text-align: center;
   justify-content: center;
   margin: auto;
-  width: 50%;
+  width: 70%;
+}
+
+#view-a-btn {
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  width: 50%
 }
 
 .hidden {
   display: none;
-  /* visibility: hidden; */
 }
 
 .edit-question {
