@@ -8,8 +8,8 @@ This web application is designed to facilitate collaborative learning by allowin
 
 - [Features](#features)
 - [Installation](#installation)
-- [Technologies](#technologies-used)
 - [Visual](#visuals)
+- [Technologies](#technologies-used)
 - [Getting Started With Express JS](#getting-started-with-express-js)
 
 ## Features
@@ -25,17 +25,17 @@ This web application is designed to facilitate collaborative learning by allowin
 - `npm i --save-dev nodemon` installs nodemone as a dev dependency for ease of testing and updating
 - `npm run watch` starts the server at [http://localhost:3001](http://localhost:3001)
 
+## Visuals
+
+If you don't wish to install the application but are curious about how it works: [CLICK HERE](https://watch.screencastify.com/v/yML6BWAiUEQyg7v2cU5J)!!
+
 ## Technologies Used
 
 - HTML5
 - CSS3
 - ES6 (JS)
 - [Express.js](#getting-started-with-express-js)
-
-## Visuals
-
-If you don't wish to install the application but are curious about how it works: [CLICK HERE](https://watch.screencastify.com/v/yML6BWAiUEQyg7v2cU5J)!!
-
+- 
 ## Getting Started With Express JS
 
 General instructions for anyone wanting to add Express.js to their own project:
