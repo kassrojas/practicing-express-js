@@ -16,8 +16,8 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-// GET Route for feedback page
-app.get('/question', (req, res) =>
+// GET Route for adding new question
+app.get('/add', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/pages/question.html'))
 );
 

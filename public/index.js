@@ -3,7 +3,7 @@ const btnFetchTerms = document.querySelector('#fetch-term-btn');
 const blurbEl = document.querySelector('.api-blurb');
 
 const getTerms = async () => {
-  const result = await fetch('/api/question', {
+  const result = await fetch('/questionlist', {
     method: 'GET',
   });
   const json = await result.json();

@@ -6,13 +6,13 @@ const uuid = require('../helpers/uuid');
 const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils')
 
 // GET Route for retrieving all the existing questions
-router.get('/api/question', (req, res) => {
+router.get('/questionlist', (req, res) => {
   console.info(`${req.method} request received for questions`);
   readFromFile('./db/question.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// POST Route for a new question
-router.post('/api/question', (req, res) => {
+// POST Route for adding a new question
+router.post('/questionlist', (req, res) => {
   console.info(`${req.method} request received to add a question`);
 
   const { question, answer, url } = req.body;
@@ -33,7 +33,7 @@ router.post('/api/question', (req, res) => {
     }
     res.json(successRes);
   } else {
-    res.error('Error in adding question');
+    res.error('Error adding question');
   }
 });
 

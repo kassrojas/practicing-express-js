@@ -40,5 +40,17 @@
         "question": " What is the difference between == and === operators?",
         "answer": "== (called loose equal) is used for comparison between two variables regardless of the datatype of the variable. === (called strict equal) is used for comparison between two variables but this will check strict type, which means it will check the data type and compare two values.",
         "url": "https://blog.hubspot.com/website/javascript-interview-questions"
+    },
+    {
+        "id": "0092",
+        "question": "this",
+        "answer": "is ",
+        "url": "atest"
+    },
+    {
+        "id": "ec43",
+        "question": "this",
+        "answer": "is ",
+        "url": "another test"
     }
 ]

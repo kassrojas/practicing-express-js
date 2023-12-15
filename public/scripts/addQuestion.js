@@ -1,14 +1,17 @@
 const questionForm = document.querySelector('#add-q-form');
-let successMsg = document.querySelector('#success-message');
-let submitBtn = document.querySelector('#submit-btn');
+const successMsg = document.querySelector('#success-message');
+const submitBtn = document.querySelector('#submit-btn');
+const questionInput = document.querySelector('#question-input');
+const answerInput = document.querySelector('#answer-input');
+const urlInput = document.querySelector('#url-input');
 
 questionForm
   .addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let question = document.querySelector('#question-input').value;
-    let answer = document.querySelector('#answer-input').value;
-    let url = document.querySelector('#url-input').value.trim();
+    let question = questionInput.value;
+    let answer = answerInput.value;
+    let url = urlInput.value.trim();
 
     const newQuestion = {
       question,
@@ -18,7 +21,7 @@ questionForm
 
     if (newQuestion) {
       // Fetch POST request to the server
-      fetch('api/question', {
+      fetch('/questionlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,13 +31,12 @@ questionForm
       })
         .then((res) => res.json())
         .then((data) => {
-          // question = '';
-          // answer = '';
-          // url = '';
           submitBtn.textContent = `${data.status}`;
           setTimeout(() => {
             submitBtn.textContent = "Submit Question";
-            window.location.reload(); //bc the =''; isnt working
+            questionInput.value = '';
+            answerInput.value = '';
+            urlInput.value = '';
           }, 1200);
         });
 

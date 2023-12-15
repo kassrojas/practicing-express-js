@@ -14,9 +14,14 @@ This application allows users to add potential JavaScript interview questions an
 
 ## Table of Contents
 
+- [Visuals](#visuals)
 - [Technologies](#technologies-used)
 - [Installation](#installation)
 - [Future Developments](#future-developments)
+
+## Visuals
+
+[Link to short video demo](#https://drive.google.com/file/d/1cbVWkYQmGeCy9Qr_Y1MdZzE0k-s7J2du/view)
 
 ## Technologies Used
 
